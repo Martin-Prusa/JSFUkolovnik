@@ -17,6 +17,7 @@ public class TasksBean {
     private String newTaskTitle = "";
 
     public void addNewTask() {
+        if(this.newTaskTitle.trim().equals("")) return;
         this.taskService.newTask(newTaskTitle);
         this.newTaskTitle = "";
     }
